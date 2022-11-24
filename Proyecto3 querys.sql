@@ -47,6 +47,9 @@ ALTER TABLE auditoria
     ALTER COLUMN tabla TYPE VARCHAR (100)
 ALTER TABLE auditoria 
     ALTER COLUMN nombre TYPE VARCHAR (100)
+	
+ALTER TABLE suscripcion 
+    ALTER COLUMN estado TYPE VARCHAR (100)
 
 -- modificaciones sesiones
 ALTER TABLE sesiones 
@@ -194,3 +197,7 @@ select * from usuario
 select * from sesiones
 select * from cursos
 select * from instructor
+select * from suscripcion
+
+select estado from suscripcion where user_id = '13'
+update suscripcion set estado='activo' where user_id=13
